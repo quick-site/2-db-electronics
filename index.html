@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Redirect</title>
+  </head>
+  <body>
+    <script>
+      const languageRedirects = {
+        de: "/de", // German
+        en: "/en", // English
+      };
+
+      // Get the language code of the user's device
+      const userLanguage = navigator.language.substring(0, 2);
+
+      if (languageRedirects[userLanguage]) {
+        window.location.href = languageRedirects[userLanguage];
+      } else {
+        window.location.href = "/en";
+      }
+    </script>
+  </body>
+</html>
